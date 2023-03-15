@@ -1,3 +1,3 @@
 # astronvim-user
 
-My user customization for AstroNvim.
+My user customization for [AstroNvim](https://astronvim.com).
