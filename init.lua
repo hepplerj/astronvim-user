@@ -7,6 +7,15 @@ return {
 		auto = true,
 		},
 
+		-- Trouble
+		{
+			"folke/trouble.nvim",
+			requires = "nvim-tree/nvim-web-devicons",
+			config = function()
+				require("trouble").setup ()
+			end
+		},
+
 		-- Nordic theme
 		{
 			'AlexvZyl/nordic.nvim',
@@ -50,5 +59,27 @@ return {
 			}
 		end,
 		},
+
+		-- Octo: for accessing Github
+		{
+			'pwntester/octo.nvim',
+			lazy = false,
+			auto = true,
+			requires = {
+				'nvim-lua/plenary.nvim',
+				'nvim-telescope/telescope.nvim',
+				'kyazdani42/nvim-web-devicons',
+			},
+			config = function ()
+				require"octo".setup()
+			end
+		},
+
+		-- Wordy
+		{
+			'preservim/vim-wordy',
+			lazy = false,
+			auto = true
+		}
 	},
 }
