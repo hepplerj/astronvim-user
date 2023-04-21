@@ -75,6 +75,43 @@ return {
 			end
 		},
 
+		-- Quarto
+		{
+			'quarto-dev/quarto-nvim',
+			dev = false,
+			lazy = false,
+			auto = true,
+			dependencies = {
+			  { 'hrsh7th/nvim-cmp' },
+			  {
+				'jmbuhr/otter.nvim',
+					dev = false,
+			},
+			},
+			config = function()
+			  require 'quarto'.setup {
+				debug = false,
+				closePreviewOnExit = true,
+				lspFeatures = {
+				  enabled = true,
+				  languages = { 'r', 'python', 'julia', 'bash', 'lua' },
+				  chunks = 'curly',
+				  diagnostics = {
+					enabled = true,
+					triggers = { "BufWritePost" }
+				  },
+				  completion = {
+					enabled = true,
+				  },
+				},
+				keymap = {
+				  hover = 'K',
+				  definition = 'gd'
+				},
+			  }
+			end
+		  },
+
 		-- Wordy
 		{
 			'preservim/vim-wordy',
