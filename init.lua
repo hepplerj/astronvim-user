@@ -1,4 +1,5 @@
 return {
+	colorscheme = "nordic",
 	plugins = {
 		-- Copilot
 		{
