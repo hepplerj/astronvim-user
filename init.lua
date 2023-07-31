@@ -61,11 +61,21 @@ return {
 		end,
 		},
 
+		-- org-bullets
 		{
 			'akinsho/org-bullets.nvim',
 			config = function()
   			require('org-bullets').setup()
 			end
+		},
+
+		-- Oil
+		{
+			"stevearc/oil.nvim",
+			opts = {},
+			config = function()
+				require("oil").setup()
+			end,
 		},
 
 		-- Octo: for accessing Github
