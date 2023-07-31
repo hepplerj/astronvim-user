@@ -61,6 +61,13 @@ return {
 		end,
 		},
 
+		{
+			'akinsho/org-bullets.nvim',
+			config = function()
+  			require('org-bullets').setup()
+			end
+		},
+
 		-- Octo: for accessing Github
 		{
 			'pwntester/octo.nvim',
