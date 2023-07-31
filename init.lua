@@ -61,6 +61,15 @@ return {
 		end,
 		},
 
+		-- Oil
+		{
+			"stevearc/oil.nvim",
+			opts = {},
+			config = function()
+				require("oil").setup()
+			end,
+		},
+
 		-- Octo: for accessing Github
 		{
 			'pwntester/octo.nvim',
