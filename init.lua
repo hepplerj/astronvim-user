@@ -1,5 +1,4 @@
 return {
-	colorscheme = "nordic",
 	plugins = {
 		-- Copilot
 		{
@@ -17,7 +16,8 @@ return {
 			end
 		},
 
-		-- Nordic theme
+		-- Themes:
+		---- nordic
 		{
 			'AlexvZyl/nordic.nvim',
 			lazy = false,
@@ -25,6 +25,23 @@ return {
 			config = function()
 				require 'nordic' .load()
 			end
+		},
+		---- habamax
+		{
+			'habamax/vim-habamax',
+			lazy = false,
+			priority = 1000,
+		},
+		---- tokyonight
+		{
+			'folke/tokyonight.nvim',
+			lazy = false,
+			priority = 1000,
+			config = function()
+				require('tokyonight').setup {
+					style = "night"
+				}
+			end,
 		},
 
 		-- Treesitter
@@ -137,4 +154,7 @@ return {
 			auto = true
 		}
 	},
+
+	-- Color scheme must come after loading configs
+	colorscheme = "tokoynight",
 }
