@@ -1,12 +1,22 @@
 return {
-	colorscheme = "nordic",
 	plugins = {
 		-- Copilot
 		{
 		"github/copilot.vim",
-		lazy = false,
+		lazy = true,
 		auto = true,
+		config = function()
+			require("copilot").load()
+		end
 		},
+
+		-- Lazygit
+		{
+        "kdheepak/lazygit.nvim",
+        config = function() 
+        	require "lazygit".load()
+        end
+    },
 
 		-- Trouble
 		{
@@ -17,7 +27,8 @@ return {
 			end
 		},
 
-		-- Nordic theme
+		-- Themes:
+		---- nordic
 		{
 			'AlexvZyl/nordic.nvim',
 			lazy = false,
@@ -25,6 +36,23 @@ return {
 			config = function()
 				require 'nordic' .load()
 			end
+		},
+		---- habamax
+		{
+			'habamax/vim-habamax',
+			lazy = false,
+			priority = 1000,
+		},
+		---- tokyonight
+		{
+			'folke/tokyonight.nvim',
+			lazy = false,
+			priority = 1000,
+			config = function()
+				require('tokyonight').setup {
+					style = "night"
+				}
+			end,
 		},
 
 		-- everforest theme
@@ -69,6 +97,14 @@ return {
 				org_default_notes_file = "~/Dropbox/org/refile.org",
 			}
 		end,
+		},
+
+		-- org-bullets
+		{
+			'akinsho/org-bullets.nvim',
+			config = function()
+  			require('org-bullets').setup()
+			end
 		},
 
 		-- Oil
@@ -139,4 +175,7 @@ return {
 			auto = true
 		}
 	},
+
+	-- Color scheme must come after loading configs
+	colorscheme = "tokoynight",
 }
