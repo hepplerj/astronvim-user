@@ -3,9 +3,20 @@ return {
 		-- Copilot
 		{
 		"github/copilot.vim",
-		lazy = false,
+		lazy = true,
 		auto = true,
+		config = function()
+			require("copilot").load()
+		end
 		},
+
+		-- Lazygit
+		{
+        "kdheepak/lazygit.nvim",
+        config = function() 
+        	require "lazygit".load()
+        end
+    },
 
 		-- Trouble
 		{
