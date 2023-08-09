@@ -27,6 +27,16 @@ return {
 			end
 		},
 
+		-- everforest theme
+		{
+			'neanias/everforest-nvim',
+			lazy = false,
+			priority = 1000,
+			config = function()
+				require 'everforest'.load()
+			end
+		},
+
 		-- Treesitter
 		{
 		"nvim-treesitter/nvim-treesitter",
