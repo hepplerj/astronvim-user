@@ -12,10 +12,10 @@ return {
 
 		-- Lazygit
 		{
-        "kdheepak/lazygit.nvim",
-        config = function() 
-        	require "lazygit".load()
-        end
+    "kdheepak/lazygit.nvim",
+    config = function() 
+    	require "lazygit".load()
+    end
     },
 
 		-- Trouble
@@ -53,6 +53,14 @@ return {
 					style = "night"
 				}
 			end,
+		},
+		---- catppuccin
+		{ 
+			'catppuccin/nvim', 
+			priority = 1000, 
+			config = function()
+				require ('catppuccin').load()
+			end
 		},
 
 		-- everforest theme
@@ -177,5 +185,5 @@ return {
 	},
 
 	-- Color scheme must come after loading configs
-	colorscheme = "tokoynight",
+	colorscheme = "catppuccin-mocha",
 }
