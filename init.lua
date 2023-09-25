@@ -54,6 +54,10 @@ return {
 				}
 			end,
 		},
+		--- catppuccin
+		{
+			"catppuccin/nvim", name = "catppuccin", priority = 1000
+		},
 
 		-- Treesitter
 		{
@@ -167,5 +171,5 @@ return {
 	},
 
 	-- Color scheme must come after loading configs
-	colorscheme = "tokoynight",
+	colorscheme = "catppuccin",
 }
