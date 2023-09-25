@@ -12,10 +12,10 @@ return {
 
 		-- Lazygit
 		{
-        "kdheepak/lazygit.nvim",
-        config = function() 
-        	require "lazygit".load()
-        end
+    "kdheepak/lazygit.nvim",
+    config = function() 
+    	require "lazygit".load()
+    end
     },
 
 		-- Trouble
