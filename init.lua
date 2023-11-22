@@ -4,7 +4,7 @@ return {
 		{
 			"kdheepak/lazygit.nvim",
 			config = function()
-				require "lazygit".load()
+				require("lazygit").setup({})
 			end
 		},
 
@@ -23,6 +23,25 @@ return {
 				})
 			end
 		},
+
+		{
+    'renerocksai/calendar-vim',
+			lazy = false,
+    	auto = true,
+		},
+
+		-- Telekasten 
+		{
+    	'renerocksai/telekasten.nvim',
+    	lazy = false,
+    	auto = true,
+    	dependencies = {'nvim-telescope/telescope.nvim'},
+    	config = function()
+				require("telekasten").setup({
+					home = vim.fn.expand("~/Dropbox/org/roam/")
+				})
+    	end
+  	},
 
 		-- Trouble
 		{
